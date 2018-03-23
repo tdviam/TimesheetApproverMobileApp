@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:scrollIndicators="right"
+    android:scrollbarStyle="insideOverlay"
+    android:scrollbars="vertical">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:text="Timesheet Details"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="10sp">
+        <include layout="@layout/content_detail_timesheet" />
+    </ScrollView>
+
+
+</RelativeLayout>

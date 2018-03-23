@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/subjectLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:width="100dp"
+        android:text="Subject:" />
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/subjectLabel"
+        />
+
+    <TextView
+        android:id="@+id/dateRangeLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:width="100dp"
+        android:text="Date Range:"
+        android:layout_below="@+id/subjectLabel"/>
+    <TextView
+        android:id="@+id/dateRange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:layout_toRightOf="@+id/dateRangeLabel"
+        android:layout_below="@+id/subject" />
+
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/subject"
+        android:gravity=""
+        android:layout_marginTop="20dp">
+        <Button
+            android:id="@+id/btnDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Details"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
