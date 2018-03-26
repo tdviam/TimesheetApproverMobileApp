@@ -61,7 +61,7 @@ class TaskAdapter extends BaseAdapter{
         Button btnDetails = (Button) rowView.findViewById(R.id.btnDetails);
 
         final Timesheet ts = (Timesheet) getItem(i);
-        subject.setText(ts.getUsername());
+        subject.setText("Submitted By " + ts.getUsername());
         dateRange.setText(ts.getStartDate() + " - " + ts.getEndDate());
 
         btnDetails.setOnClickListener(new View.OnClickListener() {

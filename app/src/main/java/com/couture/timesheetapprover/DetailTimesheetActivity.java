@@ -70,7 +70,8 @@ public class DetailTimesheetActivity extends AppCompatActivity {
         endDate = getIntent().getStringExtra("END_DATE");
         taskId = getIntent().getStringExtra("TASK_ID");
 
-        System.out.println("taskID " + taskId);
+        //System.out.println("taskID " + taskId);
+        //System.out.println("start date " + startDate);
 
         ShowTimesheetDetails openConnection = new ShowTimesheetDetails(getApplicationContext());
         openConnection.execute();
@@ -114,12 +115,12 @@ public class DetailTimesheetActivity extends AppCompatActivity {
                         "<cis:populateTimesheetPM>\n" +
                         "<cis:userName>" + username + "</cis:userName>\n" +
                         "<cis:pmName>" + pmName + "</cis:pmName>\n" +
-                        "<cis:startDate>" + startDate.replace("/","-") + "</cis:startDate>\n" +
-                        "<cis:endDate>" + endDate.replace("/","-") + "</cis:endDate>\n" +
+                        "<cis:startDate>" + startDate + "</cis:startDate>\n" +
+                        "<cis:endDate>" + endDate + "</cis:endDate>\n" +
                         "</cis:populateTimesheetPM>\n" +
                         "</soapenv:Body>\n" +
                         "</soapenv:Envelope>";
-
+                System.out.println("reqXML " + reqXML);
                 OutputStreamWriter wr = new OutputStreamWriter(connection.getOutputStream());
                 wr.write(reqXML);
                 wr.flush();
@@ -128,7 +129,7 @@ public class DetailTimesheetActivity extends AppCompatActivity {
                 System.out.println("Code ... " + responseCode);
                 if (responseCode == HttpsURLConnection.HTTP_OK) {
 
-                    BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));;
+                    BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream()));
                     StringBuilder sb = new StringBuilder();
 
                     String output;
